@@ -29,6 +29,7 @@ function generatePassword() {
   var specialCharacters = confirm("Would you like special characters in your password?");
 }
 
+
 // If statements for prompt answers
 
 if (numbers === true) {
