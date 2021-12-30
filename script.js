@@ -20,11 +20,17 @@ function writePassword() {
 // Prompt Section
 function generatePassword() {
   var passwordLength = prompt("Please enter the number of characters you want for your random password. Password must be at least 8, but no more than 128 characters.");
-    
+  if (isNaN(passwordLength) === true) {
+    window.alert("Please enter a number");
+  generatePassword();
+  }
+
+
+
   if (passwordLength < 8 || passwordLength > 128) {
       window.alert("Please enter a valid number");
-      passwordLength();
-  }
+    }
+
   var numbers = confirm("Would you like numbers in your password?");
 
   var lowerCase = confirm("Would you like lowercase letters in your password?");
